@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="blog">
+<head>
+    <title>blog</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.5.8/angular-resource.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/index.css" type="text/css">
+
+    <script src="controllers/blog.js"></script>
+    <script src="filters/customFilters.js"></script>
+    <!--<script src="controllers/productListControllers.js"></script>-->
+    <!--<script src="components/cart/cart.js"></script>-->
+    <script src="ngmodules/angular-route.js"></script>
+    <!--<script src="controllers/checkoutControllers.js"></script>-->
+</head>
+<body ng-controller="blogCtrl">
+    <div class="container">
+        <div class="title">
+
+            <h1>
+                <a href="/">blog</a>
+            </h1>
+        </div>
+
+        <ng-view />
+    </div>
+
+
+
+</body>
+</html>
+

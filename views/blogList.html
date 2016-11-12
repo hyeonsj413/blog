@@ -1,0 +1,106 @@
+<div  class="posts">
+    <ul>
+        <li class="category-{{item.category}}" ng-repeat="item in data.blogs  | filter:checkFn | range:selectedPage:pageSize ">
+            <a href="/blog/{{item.id}}">
+                <span class="category">{{ item.category }}</span>
+                <span class="title">{{ item.title}}</span>
+                <span class="time">{{ item.createdAt * 1000  | date:'medium' }}</span>
+            </a>
+        </li>
+
+        <hr class="divider">
+
+        <li class="category-travel">
+            <a href="/blog/1">
+                <span class="category">travel</span>
+                <span class="title">처음 타보는 퍼스트 클래스, ANA NH211 - 후편</span>
+                <span class="time">03 Oct 2016</span>
+            </a>
+        </li>
+
+        <li class="category-travel">
+            <a href="/travel/nh211-first-class-chapter1.html">
+                <span class="category">travel</span>
+                <span class="title">처음 타보는 퍼스트 클래스, ANA NH211 - 전편</span>
+                <span class="time">03 Oct 2016</span>
+            </a>
+        </li>
+
+        <li class="category-dev">
+            <a href="/dev/tensorflow-open-source.html">
+                <span class="category">dev</span>
+                <span class="title">"왜 Tensorflow처럼 가치 있는 것을 오픈 소스로 공개하나요?"</span>
+                <span class="time">14 Sep 2016</span>
+            </a>
+        </li>
+
+        <li class="category-travel">
+            <a href="/travel/namhae-and-613inn.html">
+                <span class="category">travel</span>
+                <span class="title">남해 그리고 613여관</span>
+                <span class="time">09 Jun 2016</span>
+            </a>
+        </li>
+
+        <li class="category-dev">
+            <a href="/dev/simplist-v3.html">
+                <span class="category">dev</span>
+                <span class="title">si.mpli.st v3 - Sketch, Gulp, cssnext</span>
+                <span class="time">25 Apr 2016</span>
+            </a>
+        </li>
+
+        <li class="category-dev">
+            <a href="/dev/from-photoshop-to-sketch.html">
+                <span class="category">dev</span>
+                <span class="title">포토샵에서 Sketch로</span>
+                <span class="time">06 Apr 2016</span>
+            </a>
+        </li>
+
+        <li class="category-life">
+            <a href="/life/glasses.html">
+                <span class="category">life</span>
+                <span class="title">안경을 맞추다</span>
+                <span class="time">15 Feb 2016</span>
+            </a>
+        </li>
+
+        <li class="category-think">
+            <a href="/think/new-year-resolutions.html">
+                <span class="category">think</span>
+                <span class="title">2016년에 해 보고 싶은 것들</span>
+                <span class="time">07 Jan 2016</span>
+            </a>
+        </li>
+
+        <li class="category-life">
+            <a href="/life/work-life-balance.html">
+                <span class="category">life</span>
+                <span class="title">직장 생활과 개인 생활의 균형 유지하기</span>
+                <span class="time">29 Nov 2015</span>
+            </a>
+        </li>
+
+        <li class="category-review">
+            <a href="/review/soylent-week-1.html">
+                <span class="category">review</span>
+                <span class="title">Soylent 1주일 후기</span>
+                <span class="time">19 Jun 2015</span>
+            </a>
+        </li>
+
+    </ul>
+
+    <div class="pagination">
+        <span class="inner-pagination">
+            <a href="/#" ng-click="blogListPrevPage()">newer</a>
+            <span>{{ selectedPage }}</span>
+            of
+            <span>{{ totalPage }}</span>
+            <a href="/#" ng-click="blogListNextPage()">older</a>
+        </span>
+
+
+    </div>
+</div>
